@@ -1,13 +1,13 @@
-const getName = (a?: string) => {
+const getName = (name?: string) => {
   // expected '' empty string pass condition
 
   // not OK
-  return a || 'JS Dżem';
+  // return name || 'JS Dżem';
 
   // OK
-  // return a ?? 'JS Dżem';
+  return name ?? 'JS Dżem';
 }
 
-const name = getName('');
+const somename = getName('');
 
-console.log({ name });
+console.log({ somename });

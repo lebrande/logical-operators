@@ -25,9 +25,13 @@ const sortedFruitsData = fruitList
   .map((fruit) => {
     return {
       name: fruit,
-      // expects banana as first on list becouse index is equal 0
+      // expects banana as first on list
       // but banana got 100 because !!order for order=0 returns false 
+
+      // before
       // order: settings.find(({ name }) => name === fruit)?.order || 100,
+
+      // after
       order: settings.find(({ name }) => name === fruit)?.order ?? 100,
     };
   })
